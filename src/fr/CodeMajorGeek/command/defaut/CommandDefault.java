@@ -6,11 +6,8 @@ import fr.CodeMajorGeek.Main;
 import fr.CodeMajorGeek.command.Command;
 import fr.CodeMajorGeek.command.Command.ExecutorType;
 import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.MessageChannel;
-import net.dv8tion.jda.core.entities.Role;
 import net.dv8tion.jda.core.entities.User;
-import net.dv8tion.jda.core.utils.PermissionUtil;
 
 public class CommandDefault {
 
@@ -28,7 +25,7 @@ public class CommandDefault {
 	}
 	
 	@Command(name="help", type=ExecutorType.USER)
-	private void info(User user, MessageChannel channel) {
+	private void help(User user, MessageChannel channel) {
 		
 		EmbedBuilder embedBuilder = new EmbedBuilder();
 		embedBuilder.setAuthor(user.getName(), null, user.getAvatarUrl()+"?size-256");
@@ -39,9 +36,9 @@ public class CommandDefault {
 		channel.sendMessage(embedBuilder.build()).queue();
 	}
 	
-	@Command(name="ban", type=ExecutorType.USER)
-	private void ban(String[] args, User user, Member member, MessageChannel channel, Role role) {
-		System.out
+	@Command(name="setupHelloChannel", type=ExecutorType.USER)
+	private void setupHelloChannel(User user, MessageChannel channel) {
+		
 		
 	}
 }
