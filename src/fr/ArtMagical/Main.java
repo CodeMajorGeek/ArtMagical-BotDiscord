@@ -54,6 +54,8 @@ public class Main implements Runnable{
 		if(args.length < 1) System.out.println("Veulliez indiquer le token du bot !");
 		else Token = args[0];
 		
+		Token = "NTA0NDE1Njk1MzU5MDQ5NzQ5.DrdrTA.CIxrNhzKQVInEktPAZB7WuAk2lo";
+		
 		try {
 			
 			Main main = new Main();

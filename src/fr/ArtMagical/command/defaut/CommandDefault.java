@@ -18,4 +18,10 @@ public class CommandDefault {
 		
 		main.setRunning(false);
 	}
+	
+	@Command(name="help", type=ExecutorType.USER)
+	private void help() {
+		
+		
+	}
 }
