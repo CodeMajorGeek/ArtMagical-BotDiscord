@@ -17,6 +17,8 @@ public class Main implements Runnable{
 	private static String Token;
 	private final Scanner scanner = new Scanner(System.in);
 	
+	public static Main getMain;
+	
 	public static MessageChannel recrutement;
 	
 	private boolean running;
@@ -26,6 +28,8 @@ public class Main implements Runnable{
 		jda = new JDABuilder(AccountType.BOT).setToken(Token).setBulkDeleteSplittingEnabled(false).buildBlocking();
 		jda.addEventListener(new BotListener(commandMap));
 		System.out.println("The bot is connected !");
+		
+		getMain = this;
 	}
 	
 	public void setRunning(boolean running) {

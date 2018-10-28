@@ -6,8 +6,11 @@ import fr.CodeMajorGeek.Main;
 import fr.CodeMajorGeek.command.Command;
 import fr.CodeMajorGeek.command.Command.ExecutorType;
 import net.dv8tion.jda.core.EmbedBuilder;
+import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.MessageChannel;
+import net.dv8tion.jda.core.entities.Role;
 import net.dv8tion.jda.core.entities.User;
+import net.dv8tion.jda.core.utils.PermissionUtil;
 
 public class CommandDefault {
 
@@ -34,5 +37,11 @@ public class CommandDefault {
 		embedBuilder.setColor(Color.YELLOW);
 		
 		channel.sendMessage(embedBuilder.build()).queue();
+	}
+	
+	@Command(name="ban", type=ExecutorType.USER)
+	private void ban(String[] args, User user, Member member, MessageChannel channel, Role role) {
+		System.out
+		
 	}
 }
