@@ -1,4 +1,4 @@
-package fr.ArtMagical.command;
+package fr.CodeMajorGeek.command;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -6,9 +6,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.ArtMagical.Main;
-import fr.ArtMagical.command.Command.ExecutorType;
-import fr.ArtMagical.command.defaut.CommandDefault;
+import fr.CodeMajorGeek.Main;
+import fr.CodeMajorGeek.command.Command.ExecutorType;
+import fr.CodeMajorGeek.command.defaut.CommandDefault;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Message;
@@ -21,7 +21,7 @@ public final class CommandMap {
 	
 	private final Main main;
     private final Map<String, SimpleCommand> commands = new HashMap<>();
-    private final String tag = "/";
+    private final String tag = "-";
    
     public CommandMap(Main main) {
     	

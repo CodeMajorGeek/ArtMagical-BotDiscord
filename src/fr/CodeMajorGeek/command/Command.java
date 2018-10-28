@@ -1,4 +1,4 @@
-package fr.ArtMagical.command;
+package fr.CodeMajorGeek.command;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

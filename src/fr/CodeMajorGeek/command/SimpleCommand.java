@@ -1,8 +1,8 @@
-package fr.ArtMagical.command;
+package fr.CodeMajorGeek.command;
 
 import java.lang.reflect.Method;
 
-import fr.ArtMagical.command.Command.ExecutorType;
+import fr.CodeMajorGeek.command.Command.ExecutorType;
 
 public final class SimpleCommand {
 	

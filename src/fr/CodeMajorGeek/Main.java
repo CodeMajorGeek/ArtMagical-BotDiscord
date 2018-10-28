@@ -1,13 +1,14 @@
-package fr.ArtMagical;
+package fr.CodeMajorGeek;
 
 import java.util.Scanner;
 
 import javax.security.auth.login.LoginException;
 
-import fr.ArtMagical.command.CommandMap;
+import fr.CodeMajorGeek.command.CommandMap;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
+import net.dv8tion.jda.core.entities.MessageChannel;
 
 public class Main implements Runnable{
 
@@ -16,11 +17,14 @@ public class Main implements Runnable{
 	private static String Token;
 	private final Scanner scanner = new Scanner(System.in);
 	
+	public static MessageChannel recrutement;
+	
 	private boolean running;
 	
 	public Main() throws LoginException, InterruptedException {
 		
 		jda = new JDABuilder(AccountType.BOT).setToken(Token).setBulkDeleteSplittingEnabled(false).buildBlocking();
+		jda.addEventListener(new BotListener(commandMap));
 		System.out.println("The bot is connected !");
 	}
 	
@@ -39,8 +43,8 @@ public class Main implements Runnable{
 		running = true;
 		
 		 while(running) {
-			 if(scanner.hasNextLine()) commandMap.commandConsole(scanner.nextLine());
 			 
+			 if(scanner.hasNextLine()) commandMap.commandConsole(scanner.nextLine());
 		 }
 		 
 		 scanner.close();
